@@ -19,7 +19,7 @@ function Cube() {
   );
 }
 
-function App() {
+function Card() {
   return (
     <div>
     <Canvas>
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Card;
