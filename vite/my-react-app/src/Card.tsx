@@ -13,7 +13,7 @@ function Cube() {
   });
 
   return (
-    <Box args={[2, 3, 0.02]} position={[0, 0, 0]} rotation={[0, 0, 0]} ref={cubeRef}>
+    <Box args={[2, 3, 0.02]} position={[0, 0, 0]} rotation={[0, 0, 0]} ref={cubeRef}  scale={1.5}>
       <meshPhongMaterial attach="material" color={0x44a88} />
     </Box>
   );

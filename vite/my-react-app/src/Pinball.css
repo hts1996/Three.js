@@ -8,3 +8,12 @@ canvas {
 	height: 100%;
 	z-index: 1;
 }
+button {
+	background-color: #0077FF; /* 버튼 배경색 */
+	color: white; /* 버튼 글자색 */
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 2; /* 버튼을 화면 위로 올림 */
+  }

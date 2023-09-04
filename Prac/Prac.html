@@ -107,9 +107,9 @@
         render.canvas.addEventListener('mousedown', () => {
             for (let i = 0; i < 10; i++) {
             const ball = Bodies.circle(mouse.position.x, mouse.position.y, 15, {
-                restitution: 0.5,
+                restitution: 0.01,
                 friction: 0.01,
-                density: 0.04,
+                density: 1,
                 isStatic: false,
                 render: {
                 fillStyle: Color[rand(0,7)], // 공의 색상을 빨간색으로 설정
