@@ -22,7 +22,14 @@ function Cube() {
 function Card() {
   return (
     <div>
-    <Canvas>
+    <Canvas
+    camera={
+      {fov:75,
+        near:1,
+        far:20,
+        position:[7,7,0]
+    }}
+    >
       <ambientLight intensity={1} />
       <directionalLight position={[1, 2, 4]} intensity={1} />
       <Cube />

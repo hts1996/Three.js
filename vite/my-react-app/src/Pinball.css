@@ -1,18 +1,20 @@
-body { margin: 0; overflow: hidden; }
-canvas {
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
+body { margin: 0; overflow: auto; }
+canvas{
 	width: 100%;
-	height: 100%;
-	z-index: 1;
+	height: auto;
 }
 button {
-	background-color: #0077FF; /* 버튼 배경색 */
-	color: white; /* 버튼 글자색 */
+	background-color: aqua;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	position:absolute; 
+	top:50px;
+	left:100px;
+	color: black; /* 버튼 글자색 */
 	border: none;
-	padding: 10px 20px;
 	font-size: 16px;
 	cursor: pointer;
 	z-index: 2; /* 버튼을 화면 위로 올림 */
