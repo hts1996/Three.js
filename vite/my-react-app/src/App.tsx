@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div id="card1">
-    {/* <Card />
-    <Card /> */}
+    {/* <Card /> */}
+    {/* <Card /> */}
     {/* <Pinball /> */}
     <Game />
     </div>
