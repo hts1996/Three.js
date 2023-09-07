@@ -18,3 +18,10 @@ button {
 	cursor: pointer;
 	z-index: 2; /* 버튼을 화면 위로 올림 */
   }
+.score {
+	position: sticky;
+  }
+.GameModal{
+	width: 60%;
+	height: 60%;
+}
