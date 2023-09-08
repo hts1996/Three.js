@@ -10,8 +10,8 @@ function App() {
     <div id="card1">
     {/* <Card /> */}
     {/* <Card /> */}
-    {/* <Pinball /> */}
-    <Game />
+    <Pinball />
+    {/* <Game /> */}
     {/* <Test /> */}
     </div>
   )
