@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Engine, Render, World, Bodies, MouseConstraint, Mouse, Body } from 'matter-js';
-import './Pinball.css'
+import './Pinball.module.css'
 const width = window.innerWidth;
 const height = window.innerHeight;
 

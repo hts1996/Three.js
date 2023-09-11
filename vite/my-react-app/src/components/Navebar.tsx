@@ -10,6 +10,7 @@ function Navbar() {
             <a href="/game/">game</a>
             <a href="/pinball/">pinball</a>
             <a href="/card/">card</a>
+            <a href="/login/">login</a>
         </div>
 
     </div>

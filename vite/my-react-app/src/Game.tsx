@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Engine, Render, World, Bodies, MouseConstraint, Mouse, Body,Events } from 'matter-js';
-import './Game.css';
+import './Game.module.css';
+import Button from 'react-bootstrap/Button';
 import Modal from 'react-modal';
 import finball from "./assets/finball.png" 
 const width = window.innerWidth;
 const height = window.innerWidth*5;
-const Payment = 10;
+const Payment = 1;
 const theme = '#4C4499';
   const dummy=
     [
@@ -71,7 +72,9 @@ function App() {
   let angle=0;
   const Color = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
   function openModal() {
+    console.log('asdfasdfasdf')
     setIsModalOpen(true);
+    console.log(isModalOpen)
   }
   // 모달 닫기 함수
   const closeModal = () => {
@@ -182,7 +185,7 @@ useEffect(() => {
     if (isMobile) {
       engine.gravity.y = 0.12
     } else {
-      engine.gravity.y = 0.35
+      engine.gravity.y = 0.30
     }
     const mouse = Mouse.create(render.canvas);
     const mouseConstraint = MouseConstraint.create(engine, {
@@ -461,22 +464,6 @@ useEffect(() => {
         return 'click';
       }
     })();
-    // render.canvas.addEventListener(clickEvent, () => {
-    //   for (let i = 0; i < 10; i++) {
-    //     const ball = Bodies.circle(X[Math.floor(Math.random() * X.length)], Y[Math.floor(Math.random() * Y.length)], width/70, {
-    //       restitution: 0.9,
-    //       friction: 0.01,
-    //       density: 0.1,
-    //       label:"red",
-    //       isStatic: false,
-    //       render: {
-    //         fillStyle: Color[Math.floor(Math.random() * Color.length)],
-    //         strokeStyle: 'black',
-    //         lineWidth: 3,
-    //       },
-    //     });
-    
-
     const Boundary = [wall4,rot1,rot2,rot3,rot4,rot5,stick1,stick2, wall1, wall2, wall3,block,wall5,dia1,dia2,dia3,dia4,wall6,wall7,wall8,wall9,dia5,dia6,dia7,dia8,FinBallLogo,borderBody];
  
     World.add(engine.world, Boundary);
@@ -606,7 +593,11 @@ useEffect(() => {
             setOrangeCount(Pay.filter(ball => ball.render.fillStyle === "orange").length)
             setPurpleCount(Pay.filter(ball => ball.render.fillStyle === "purple").length)
             if (Pay.length==Payment){
-              openModal()
+              console.log(Pay.length,Payment)
+              console.log(Pay)
+              // openModal()
+              setIsModalOpen(true)
+              console.log(isModalOpen)
               return;
             }
           }
@@ -633,6 +624,7 @@ useEffect(() => {
         id="ballCount"
         style={{
           position: 'fixed',
+          zIndex:3,
           background: 'grey',
           padding: '5px 10px',
           borderRadius: '5px',
@@ -648,7 +640,7 @@ useEffect(() => {
         <div style={{color:"orange"}}>{userColor["orange"]} : {orangeCount}</div>
         <div style={{color:"purple"}}>{userColor["purple"]} : {purpleCount}</div>
       </div>
-      <Modal
+          <Modal
       ariaHideApp={false}
   isOpen={isModalOpen}
   onRequestClose={closeModal}

@@ -1,9 +1,9 @@
-body { margin: 0; overflow: auto; }
-canvas{
+.body { margin: 0; overflow: auto; }
+.canvas{
 	width: 100%;
 	height: auto;
 }
-button {
+.button {
 	background-color: aqua;
 	border-radius: 8px;
 	border: 1px solid transparent;

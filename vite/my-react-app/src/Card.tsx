@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Box } from '@react-three/drei';
-import './Card.css'
+import './Card.module.css'
 
 function Cube() {
   const cubeRef = useRef();
