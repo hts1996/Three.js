@@ -31,20 +31,7 @@ function App() {
       }
     });
 
-    // Create a mouse and add mouse interaction
-    const mouse = Mouse.create(render.canvas);
-    const mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.2,
-        render: {
-          visible: false,
-        }
-      }
-    });
 
-    // Add mouse constraint to the world
-    World.add(engine.world, mouseConstraint);
 
     // Create ground
     const ground = Bodies.rectangle(width, height*5, width*2, 40, { isStatic: true,render: {
